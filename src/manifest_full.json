@@ -1,0 +1,90 @@
+// https://developer.chrome.com/extensions/manifest
+{
+	"manifest_version": 2,
+	"name": "Messenger Popout",
+	"version": "1.0.0",
+	"version_name": "1.0.0 beta",
+
+	"author": "Alexander Hofbauer",
+
+	"default_locale": "en",
+	"description": "Framing Facebook Messenger for PopUp use.",
+	"icons": {
+		"128": "img/icon_128.png",
+		"16": "img/icon_16.png",
+		"24": "img/icon_24.png",
+		"32": "img/icon_32.png",
+		"48": "img/icon_48.png"
+	},
+
+	"browser_action": {
+		"default_icon": "img/icon_256.png",
+		"default_title": "Messenger Popout",
+		// "default_popup": ""
+	},
+
+	// "automation": "",
+	// "background": {
+	// 	"scripts": [],
+	// 	"page": "",
+	// 	"persistent": false
+	// }
+	// "background_page": "",
+	// "chrome_settings_overrides": {
+	// 	"homepage": "",
+	// 	"search_provider": "",
+	// 	"startup_pages": ""
+	// },
+	// "chrome_ui_overrides": {
+	// 	"bookmarks_ui": {
+	// 		"remove_bookmark_shortcut": true,
+	// 		"remove_button": true
+	// 	}
+	// },
+	// "chrome_url_overrides": {},
+	// "commands": {},
+	// "content_capabilities": "",
+	"content_scripts": [
+		{
+			"matches": ["https://www.messenger.com/*"],
+			"css": [],
+			"js": []
+		}
+	],
+	// "content_security_policy": "",
+	// "converted_from_user_script": "",
+	// "current_locale": "",
+	// "devtools_page": "",
+	// "event_rules": [],
+	// "externally_connectable": {},
+	// "homepage_url": "http://hofbauer.rocks/extensions/Messenger",
+	// "export": {},
+	// "incognito": "spanning",
+	// "input_components": "",
+	// "key": "",
+	"minimum_chrome_version": "40",
+	// "nacl_modules": [],
+	// "oauth2": "",
+	"offline_enabled": false,
+	// "omnibox": {
+	// 	"keyword": ""
+	// },
+	// "optional_permissions": [],
+	"options_ui": {
+		"page": "options.html",
+		"chrome_style": true,
+		// "open_in_tab": false
+	},
+	"permissions": [
+		"storage",
+	],
+	// "platforms": "",
+	// "spellcheck": "",
+	// "storage": {
+	// 	"managed_schema": "schema.json"
+	// },
+	// "system_indicator": "",
+	// "tts_engine": {},
+	// "update_url": "",
+	// "web_accessible_resources": []
+}

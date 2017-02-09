@@ -1,0 +1,10 @@
+@media (max-width:400px) {
+	._4bl9 {
+		/* display:none; */
+		max-width:320px;
+	}
+	._4sp8 {
+		min-width:320px;
+		max-width:320px;
+	}
+}

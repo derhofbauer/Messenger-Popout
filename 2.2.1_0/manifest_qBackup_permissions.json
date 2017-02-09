@@ -1,0 +1,47 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"name": "Messenger (Unofficial)",
+	"version": "2.2.0",
+	"manifest_version": 2,
+	"description": "Use Messenger (Unofficial) from within your browser",
+	"browser_action": {
+		"default_title": "Messenger (Unofficial)",
+		"default_icon": "img/icon_256.png"
+	},
+	"background": {
+    	"scripts": [ "background.js" ]
+    },
+    "options_page": "pinned.html",
+    "content_scripts": [ {
+		"matches": ["https://www.facebook.com/*"],
+		"js": ["ga.js"]
+	},
+	{
+		"matches": ["https://m.facebook.com/messages*"],
+		"css": ["customstyle.css"],
+		"js": ["customscript.js", "ga.js"]
+	},
+	{
+		"matches": ["https://www.messenger.com/*"],
+		"css": ["customstyle_v2.css"],
+		"js": ["customscript_v2.js", "ga.js"]
+	} ],
+    "permissions": [
+		"tabs",
+		"storage",
+		"notifications",
+		"http://*.facebook.com/",
+		"https://*.facebook.com/",
+		"http://*.messenger.com/",
+		"https://*.messenger.com/"
+	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com https://*.google.com https://*.googleapis.com https://www.google-analytics.com; object-src 'self' 'unsafe-eval'",
+	"icons": {
+		"128": "img/icon_128.png",
+		"48": "img/icon_48.png",
+		"32": "img/icon_32.png",
+		"24": "img/icon_24.png",
+		"16": "img/icon_16.png"
+	}
+}

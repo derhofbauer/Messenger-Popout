@@ -21,11 +21,17 @@ module.exports = (grunt) ->
 					format: true
 					indent: 2
 
+		csslint:
+			all:
+				src: ['src/css/*.css']
 
 
 	grunt.loadNpmTasks 'grunt-line-remover'
 	grunt.loadNpmTasks 'grunt-jsonlint'
+	grunt.loadNpmTasks 'grunt-contrib-csslint'
+
 	grunt.registerTask 'default', [
 		'lineremover',
-		'jsonlint'
+		'jsonlint',
+		'csslint'
 	]

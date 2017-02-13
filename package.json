@@ -12,6 +12,7 @@
     "facebook",
     "menssenger"
   ],
+  "repository": "https://github.com/derhofbauer/Messenger-Popout",
   "author": "Alexander Hofbauer",
   "license": "ISC",
   "devDependencies": {

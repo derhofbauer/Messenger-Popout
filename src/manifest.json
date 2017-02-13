@@ -20,7 +20,7 @@
   "offline_enabled": false,
   "options_ui": {
     "page": "html/options.html",
-    "chrome_style": true
+    "chrome_style": false
   },
   "permissions": [
     "storage"
